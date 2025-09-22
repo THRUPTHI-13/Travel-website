@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Booking / Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Booking / Event Registration</h1>
+    <nav>
+        <a href="home1.html">Home</a>
+        <a href="destination.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="evnt&fest.html">Events</a>
+        <a href="booking.html">Booking</a>
+    </nav>
+</header>
+<h3>Enter the following for the booking process</h3><div class="container">
+    <form onsubmit="handleSubmit(event)">
+        <label>Your Name:</label><br><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Email:</label><br><br>
+        <input type="email" id="email" required><br><br>
+
+        <label>Phone:</label><br><br>
+        <input type="tel" id="phone" required><br><br>
+
+        <label>Type:</label><br><br>
+        <select id="type" required>
+            <option value="">--Select--</option>
+            <option value="Hotel">Hotel Booking</option>
+            <option value="Event">Event Registration</option>
+        </select><br><br>
+
+  
+
+        <label>Booking Date (Only for Hotels):</label><br><br>
+        <input type="date" id="date"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+function handleSubmit(e) {
+    e.preventDefault();
+    const data = {
+        customer_name: document.getElementById("name").value,
+        customer_email: document.getElementById("email").value,
+        customer_phone: document.getElementById("phone").value,
+        booking_type: document.getElementById("type").value,
+    
+        booking_date: document.getElementById("date").value
+    };
+
+    console.log("Form submitted:", data);
+    alert("Your booking/registration has been recorded. Thank you ");
+}
+</script>
+
+</body>
+</html>

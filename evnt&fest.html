@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Festivals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<header>
+    <h1>Events & Festivals</h1>
+    <nav>
+      <a href="home1.html">Home</a>
+        <a href="destination.html">Destinations</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="evnt&fest.html">Events</a>
+        <a href="booking.html">Booking</a>
+    </nav>
+</header>
+
+<div class="container" id="events-list"></div>
+
+<script>
+const events = [
+    { name: "Kambala Festival", date: "2025-11-20", location: "Moodbidri", description: "Traditional buffalo race held in paddy fields." },
+    { name: "Yakshagana Night", date: "2025-09-10", location: "Mangalore", description: "Night-long dance drama performance with colorful costumes." },
+    { name: "Udupi Paryaya Festival", date: "2025-01-18", location: "Udupi", description: "Ceremony marking the transfer of responsibilities between Udupi temples." },
+    { name: "Car Festival", date: "2025-12-05", location: "Kateel", description: "Chariot pulling festival at the Kateel temple." },
+];
+
+function showEvents() {
+    let html = "";
+    events.forEach(e => {
+        html += `<div class="box"><h3>${e.name}</h3>
+                 <p><strong>Date:</strong> ${e.date}</p>
+                 <p><strong>Location:</strong> ${e.location}</p>
+                 <p>${e.description}</p>
+                </div>`;
+    });
+    document.getElementById("events-list").innerHTML = html;
+}
+
+showEvents();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+background-color: rgb(191, 193, 197);
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    padding: 10px;
+}
+
+.box{
+    background-color: aliceblue;
+    float: left;
+    width: 25%;
+    margin-left: 5%;
+    border: 1px solid rgb(148, 144, 144);
+    margin-right: 2%;
+    margin-top: 6px;
+    padding: 10px;
+}
+.box2{
+        background-color: aliceblue;
+
+    float: right;
+    width: 25%;
+    margin-left: 2%;
+    border: 1px solid rgb(148, 144, 144);
+    margin-right: 3%;
+    margin-top: 6px;
+    padding: 10px;
+}
